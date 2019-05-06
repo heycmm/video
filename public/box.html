@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9">
+    <link rel="stylesheet" href="./css/base.min.css?1" />
+    <link rel="shortcut icon" type="images/x-icon" href="https://www.heycmm.cn/upload/2019/2/WechatIMG120190306134401857.jpeg">
+    <title>一次看十级番</title>
+    <script src="./js/CommentCoreLibrary.min.js"></script>
+    <script src="./js/ABPlayer.min.js"></script>
+    <script src="./js/jquery3.4.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./coverflow/coverflow.js"></script>
+    <script src="./coverflow/scroll.js"></script>
+    <style>
+        body{
+            background-color:#000;
+            overflow:hidden;
+        }
+    </style>
+    <script type="text/javascript">
+        window.addEventListener("load",function(){
+            var v =[]
+            for (var i = 1; i < 11; i++) {
+                var id= "v"+i;
+                var video="video"+i;
+                var da={"id":id,"video":video};
+                v.push(da);
+            }
+        // console.log(v);
+            for (var i = 0; i < v.length; i++) {
+               // console.log(v[i].id);
+                //console.log(v[i].video);
+                var inst = ABP.create(document.getElementById(v[i].video), {
+                    "src":document.getElementById(v[i].id),
+                    "width":672,
+                    "height":510,
+                    "mobile":true
+                });
+                (new CommentLoader(inst.cmManager)).setParser(BilibiliParser).load("GET", "./comment-science.xml");
+            }
+            /*(new CommentLoader(inst1.cmManager)).setParser(BilibiliParser).load("GET", "./comment-science.xml");
+            (new CommentLoader(inst2.cmManager)).setParser(BilibiliParser).load("GET", "./comment-otsukimi.xml");
+            (new CommentLoader(inst3.cmManager)).setParser(BilibiliParser).load("GET", "./hanabi.xml");
+            (new CommentLoader(inst4.cmManager)).setParser(BilibiliParser).load("GET", "./hanabi.xml");*/
+            $('.coverflow').coverflow();
+        });
+    </script>
+</head>
+<body>
+<div class="coverflow">
+    <div id="video1" class="cover"></div>
+    <div id="video2" class="cover"></div>
+    <div id="video3" class="cover"></div>
+    <div id="video4" class="cover"></div>
+    <div id="video5" class="cover"></div>
+    <div id="video6" class="cover"></div>
+    <div id="video7" class="cover"></div>
+    <div id="video8" class="cover"></div>
+    <div id="video9" class="cover"></div>
+    <div id="video10" class="cover"></div>
+</div>
+
+<script>
+    $(function() {
+
+    });
+</script>
+<div style="display:none">
+    <video id="v1" autobuffer="true" data-setup="{}">
+    <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%96%A9%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B3%2F%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B301.mp4" type="video/mp4">
+</video>
+    <video id="v2" autobuffer="true" data-setup="{}">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%96%A9%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B3%2F%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B302.mp4" type="video/mp4">
+    </video>
+    <video id="v3" autobuffer="true" data-setup="{}">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%96%A9%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B3%2F%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B303.mp4" type="video/mp4">
+    </video>
+    <video id="v4" autobuffer="true" data-setup="{}">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%96%A9%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B3%2F%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B304.mp4" type="video/mp4">
+    </video>
+    <video id="v5" autobuffer="true" data-setup="{}">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%96%A9%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B3%2F%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B305.mp4" type="video/mp4">
+    </video>
+    <video id="v6" autobuffer="true" data-setup="{}">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%96%A9%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B3%2F%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B306.mp4" type="video/mp4">
+    </video>
+    <video id="v7" autobuffer="true" data-setup="{}">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%96%A9%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B3%2F%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B307.mp4" type="video/mp4">
+    </video>
+    <video id="v8" autobuffer="true" data-setup="{}">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%96%A9%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B3%2F%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B308.mp4" type="video/mp4">
+    </video>
+    <video id="v9" autobuffer="true" data-setup="{}">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%96%A9%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B3%2F%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B309.mp4" type="video/mp4">
+    </video>
+    <video id="v10" autobuffer="true" data-setup="{}">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%96%A9%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B3%2F%E8%B5%A4%E7%BA%A2%E4%B9%8B%E7%9E%B310.mp4" type="video/mp4">
+    </video>
+</div>
+
+</body>
+</html>

@@ -1,10 +1,9 @@
-
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" type="images/x-icon" href="https://www.heycmm.cn/upload/2019/2/WechatIMG120190306134401857.jpeg">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <title>three.js css3d - periodic video table</title>
+    <title>配置低别点啊</title>
     <style>
         html, body {
             height: 100%;
@@ -82,10 +81,10 @@
 <!--/Mine-->
 <div id="container"></div>
 <div id="menu">
-    <button id="table">TABLE</button>
-    <button id="sphere">SPHERE</button>
-    <button id="helix">HELIX</button>
-    <button id="grid">GRID</button>
+    <button id="table">四连</button>
+    <button id="sphere">旋转</button>
+    <button id="helix">跳跃</button>
+    <button id="grid">闭着眼</button>
 </div>
 
 <script>
@@ -139,7 +138,7 @@
                 };
             })()();
 
-            switch(Math.round(i / 3)){
+            switch(Math.round(i / 4)){
                 case 1:
                     (new CommentLoader(inst.cmManager)).setParser(BilibiliParser).load("GET", "../comment-otsukimi.xml");
                     break;
@@ -147,6 +146,9 @@
                     (new CommentLoader(inst.cmManager)).setParser(BilibiliParser).load("GET", "../comment-science.xml");
                     break;
                 case 3:
+                    (new CommentLoader(inst.cmManager)).setParser(BilibiliParser).load("GET", "hanabi.xml")
+                    break;
+                case 2:
                     (new CommentLoader(inst.cmManager)).setParser(BilibiliParser).load("GET", "hanabi.xml")
                     break;
             }
@@ -340,19 +342,19 @@
 </script>
 <div style="display:none">
     <video id="v1" autobuffer="true" data-setup="{}">
-        <source src="http://static.cdn.moe/ccltestingvideos/outer_science.webm" type="video/webm">
-        <source src="http://static.cdn.moe/ccltestingvideos/outer_science.mp4" type="video/mp4">
+        <source src="//static.cdn.moe/ccltestingvideos/outer_science.webm" type="video/webm">
+        <source src="//static.cdn.moe/ccltestingvideos/outer_science.mp4" type="video/mp4">
     </video>
     <video id="v2" autobuffer="true" data-setup="{}">
-        <source src="http://static.cdn.moe/ccltestingvideos/otsukimi_recital.mp4" type="video/mp4">
-        <source src="http://static.cdn.moe/ccltestingvideos/otsukimi_recital.webm" type="video/webm">
+        <source src="//static.cdn.moe/ccltestingvideos/otsukimi_recital.mp4" type="video/mp4">
+        <source src="//static.cdn.moe/ccltestingvideos/otsukimi_recital.webm" type="video/webm">
     </video>
     <video id="v3" autobuffer="true" data-setup="{}">
-        <source src="http://content.bitsontherun.com/videos/bkaovAYt-52qL9xLP.mp4" type="video/mp4">
-        <source src="http://content.bitsontherun.com/videos/bkaovAYt-27m5HpIu.webm" type="video/webm">
+        <source src="//content.bitsontherun.com/videos/bkaovAYt-52qL9xLP.mp4" type="video/mp4">
+        <source src="//content.bitsontherun.com/videos/bkaovAYt-27m5HpIu.webm" type="video/webm">
     </video>
     <video id="v4" autobuffer="true" data-setup="{}">
-        <source src="http://tools.kanoha.org/experimental/demo.mp4" type="video/mp4">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=fe88jJ-CmcHY1Bt1ZE-G7hakqEOp0DNHfOBztVQU-X1z4wSPb0vyXnc7nxriYLooys2tnMDylw&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E5%9C%B0%E4%B8%8B%E5%9F%8E%E9%82%82%E9%80%85%E5%A4%96%E4%BC%A0(%E5%89%91%E5%A7%AC%E7%A5%9E%E5%9C%A3%E8%B0%AD)%2F%E7%AC%AC1%E9%9B%86%20%E5%89%91%E5%A7%AC%E4%B8%8E%E5%A6%96%E7%B2%BE.mp4" type="video/mp4">
     </video>
 </div>
 </body>

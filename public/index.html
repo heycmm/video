@@ -1,0 +1,78 @@
+<html>
+<head>
+    <link rel="shortcut icon" type="images/x-icon" href="https://www.heycmm.cn/upload/2019/2/WechatIMG120190306134401857.jpeg">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" value="IE=9">
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/colpick.css" />
+    <title>关于几个小播放器的测试</title>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/CommentCoreLibrary.min.js"></script>
+    <script src="./js/ABPMobile.js"></script>
+    <script src="./js/ABPLibxml.js"></script>
+    <script src="./js/ABPlayer.js"></script>
+    <script src="./js/ColPick.js"></script>
+    <style>
+        .link_button {
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            border: solid 1px #20538D;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+            background: #6ab825;
+            color: #FFF;
+            padding: 8px 12px;
+            text-decoration: none;
+        }
+
+         .button2 {
+             font: bold 11px Arial;
+             text-decoration: none;
+             background-color: #EEEEEE;
+             color: #333333;
+             padding: 2px 6px 2px 6px;
+             border-top: 1px solid #CCCCCC;
+             border-right: 1px solid #333333;
+             border-bottom: 1px solid #333333;
+             border-left: 1px solid #CCCCCC;
+         }
+
+    </style>
+    <script type="text/javascript">
+        window.addEventListener("load",function(){
+            var inst = ABP.create(document.getElementById("player1"), {
+                src: {
+                    playlist: [{
+                        video: document.getElementById("video-1"),
+                        comments: "./comment-science.xml"
+                    }
+                    ]
+                },
+                width: 960,
+                height: 500,
+                mobile: isMobile()
+            });
+            window.abpinst = inst;
+        });
+    </script>
+</head>
+<body>
+
+<div id="player1">
+    <video id="video-1" autobuffer="true" data-setup="{}">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE%2F6.mp4" type="video/mp4">
+    </video>
+</div>
+<div>
+    <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p><br/>
+    <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p><br/>
+    <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p><br/>
+</div>
+<div >
+    <p>其他</p><br/>
+    <a class="link_button" href="box.html" target="_blank">demo1</a>
+    <a class="link_button" href="periodic.html" target="_blank">demo2</a><br/>
+</div>
+</body>
+
+</html>
