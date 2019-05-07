@@ -40,6 +40,14 @@
     </style>
     <script type="text/javascript">
         window.addEventListener("load",function(){
+          /*  $.get("./file.json",function (data) {
+                var path = data.path;
+            },"json");*/
+            //var par=document.getElementById("player1")
+            //console.log(par.src);
+           // console.log(par);
+           // var plist = par.playlist
+          //  console.log(plist);
             var inst = ABP.create(document.getElementById("player1"), {
                 src: {
                     playlist: [{
@@ -60,11 +68,13 @@
 
 <div id="player1">
     <video id="video-1" autobuffer="true" data-setup="{}">
-        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=5c66Cqwx89v9sqIsFGgQSXs4x70fJpx0MM0pmgvWbWzNoJTJxUFtUPrQsDRDOMpQNOnjV5HZDQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE%2F6.mp4" type="video/mp4">
+        <source src="https://ccccc.me/index.php?explorer/fileProxy&accessToken=a049lWG5a44NG32f-svUVfp_xksdnVUWYqEr8kTdpqd4SWv7MoTEHzMW_SH6WKHpCcNAa9EEdQ&path=%7BgroupPath%7D%3A1%2F%E5%8A%A8%E6%BC%AB%2F%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE%2F6.mp4" type="video/mp4">
     </video>
 </div>
 <div>
     <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p><br/>
+    <p><a href="https://github.com/proxygit/video">Source</a></p><br/>
+
 </div>
 <div >
     <p>其他</p><br/>

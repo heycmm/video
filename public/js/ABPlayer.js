@@ -251,8 +251,10 @@ var ABP = {
 				}
 			});
 			elem.appendChild(container);
+			//console.log("254:"+ $(elem));
 		} else {
 			container = elem;
+			console.log("256:"+container)
 		}
 		// Create the innards if empty
 		if (container.children.length > 0 && params.replaceMode) {
@@ -270,13 +272,16 @@ var ABP = {
 				})
 			]);
 			playlist.push(params.src);
+			console.log("273:"+eval(playlist))
 		} else if (params.src.hasOwnProperty("playlist")) {
 			var data = params.src;
+			//console.log("275:"+JSON.stringify(eval(data)));//获得弹幕
 			var plist = data.playlist;
 			for (var id = 0; id < plist.length; id++) {
 				if (plist[id].hasOwnProperty("sources")) {
 					var sources = [];
 					for (var mime in plist[id]["sources"]) {
+						//console.log("284:"+plist[id][mime]);
 						sources.push(_("source", {
 							"src": plist[id][mime],
 							"type": mime
@@ -287,12 +292,15 @@ var ABP = {
 						"dataSetup": "{}",
 					}, sources));
 				} else if (plist[id].hasOwnProperty("video")) {
+					//console.log("295:"+plist[id]["video"].innerHTML);
 					playlist.push(plist[id]["video"]);
 				} else {}
 				danmaku.push(plist[id]["comments"]);
 			}
+			//console.log("300:"+playlist[0].innerHTML)
 		} else {
 			playlist.push(params.src);
+			//console.log("303"+playlist)
 		}
 		container.appendChild(_("div", {
 			"className": "ABP-Player"
